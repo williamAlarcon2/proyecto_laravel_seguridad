@@ -1,0 +1,150 @@
+.containerhome {
+  width: 400px;
+  heignt: 800px;
+  background: linear-gradient(to bottom, #7db9e8 52%, #38c126 74%, #38c126 74%);
+  width: 100%;
+  padding-top: 103px;
+}
+.containerhome #egg {
+  display: block;
+  margin-left: 200px;
+  animation: shake-bottom 0.8s 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+.containerhome .message {
+  font-family: 'Amatic SC', cursive;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  background: whitesmoke;
+  font-size: 60px;
+  animation: slide-in 0.5s 6s ease-in forwards, show 0.3s 6s ease-in forwards;
+  opacity: 0;
+}
+.containerhome .message p {
+  margin: 0;
+}
+#crack {
+  opacity: 0;
+  animation: show 0.1s 3s ease-in forwards;
+}
+#egg-top {
+  animation: swing 0.1s 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+#chicken {
+  animation: slide-top 0.9s 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shake-bottom {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(1deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-2deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(2deg);
+  }
+  80% {
+    transform: rotate(-1deg);
+  }
+  90% {
+    transform: rotate(1deg);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate3d(-1, 1, 0, 0deg);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: rotate3d(-1, 1, 0, -180deg);
+    transform-origin: 100% 100%;
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-80px);
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(330px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@media (min-width: 610px) and (max-width: 730px) {
+  .containerhome #egg{
+    margin-left: 108px;
+    overflow-x: hidden;
+  }  
+  .containerhome .message{
+    left: 284px;
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 503px) and (max-width: 609px) {
+  .containerhome #egg{
+    margin-left: 5px;
+    overflow-x: hidden;
+  }  
+  .containerhome .message{
+    left: 186px;
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 355px) and (max-width: 502px) {
+  .containerhome #egg{
+    margin-left: -31px;
+    overflow-x: hidden;
+    width: 337px;
+  }  
+  .containerhome .message{
+     left: 106px;
+    overflow-x: hidden;
+    top: 116px;
+  }
+}
+@media (min-width: 349px) and (max-width: 356px) {
+  .containerhome #egg{
+    margin-left: -30px;
+    overflow-x: hidden;
+    width: 123%;
+  }  
+  .containerhome .message{
+     left: 106px;
+    overflow-x: hidden;
+    top: 116px;
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,355 @@
+/*
+|--------------------------------------------------------------------------
+| ESTILO FORMULARIO
+|--------------------------------------------------------------------------
+*/
+body {
+    background: #eceff4;
+}
+
+.search{
+  margin: 0 0 0 0 !important;
+}
+
+.form-group {
+  padding-bottom: 7px;
+  margin: 27px 0 0 0;
+}
+.wizard-card[data-color="red"] .form-group .form-control {
+  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.form-control,
+.form-group .form-control {
+  border: 0;
+  background-image: linear-gradient(#E74C3C, #E74C3C), linear-gradient(#D2D2D2, #D2D2D2);
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(100% - 1px);
+  background-color: transparent;
+  transition: background 0s ease-out;
+  float: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-weight: 400;
+}
+.form-group {
+  position: relative;
+}
+.form-group.label-static label.control-label, .form-group.label-placeholder label.control-label, .form-group.label-floating label.control-label {
+  position: absolute;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.form-group.is-focused .form-control {
+  outline: none;
+  background-image: linear-gradient(#4d99ea, #4d99ea), linear-gradient(#D2D2D2, #D2D2D2);
+  background-size: 100% 2px, 100% 1px;
+  box-shadow: none;
+  transition-duration: 0.3s;
+}
+.checkbox label,
+.radio label,
+label {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {
+  top: -7px;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+.form-group.label-static label.control-label, .form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label {
+  top: -28px;
+  left: 0;
+  font-size: 11px;
+  line-height: 1.07143;
+}
+.input-group .input-group-addon {
+  border: 0;
+  background: transparent;
+  padding: 6px 15px 0px;
+}
+
+.separacion{
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
+
+.separacionhome{
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+#formulario{
+  padding-top: 10px;
+}
+
+#formularioguia{
+  padding-top: 25px;
+}
+
+#Accesos{
+font-weight: bold;
+cursor: pointer;
+}
+
+#accesos_limitados
+{
+  height: 50px;
+}
+
+#lista_permisos
+{
+  text-align: justify;
+}
+
+.cambiarcontrasena{
+  padding-top: 4%;
+}
+.camposperfil{
+  padding-top: 3%;
+}
+.labelponedoraslevante{
+  font-size: 17px !important;
+}
+.checkno
+{
+  width: 33% !important;
+}
+.checksi
+{
+  width: 33%;
+}
+.enviarproduccion
+{
+    padding-top: 3.5%;
+    padding-bottom: 4.9%;
+}
+.modulocheck{
+    width: 97% !important;
+}
+.label_sublote
+{
+    font-size: 114%;
+    font-weight: bold;
+}
+
+.dato_invalido
+{
+    background-image: linear-gradient(#E74C3C, #E74C3C), linear-gradient(red, red) !important;
+}
+
+.dato_invalido_list{
+  background: #ff00004d;
+}
+
+/*
+|--------------------------------------------------------------------------
+| ESTILO BOTÓN
+|--------------------------------------------------------------------------
+*/
+
+#boton_formulario {
+  background: #247cda;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: .6s;
+  overflow: hidden;
+}
+
+.boton {
+  background: #247cda;
+  color: white !important;
+  width: 150px;
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: .6s;
+  overflow: hidden;
+  padding-top: 1%;
+}
+
+#lbl{
+  font-size: 16px;
+  float: left;
+}
+
+.botoncancelar {
+  background: #247cda;
+  color: white !important;
+  width: 150px;
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: .6s;
+  overflow: hidden;
+  padding-top: 4%;
+}
+
+#boton_formulario:focus {
+  outline: 0;
+}
+#boton_formulario:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .5;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+}
+#boton_formulario:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+}
+#boton_formulario:hover {
+  background: #289ad6;
+  cursor: pointer;
+}
+#boton_formulario:hover:before {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: .7s;
+}
+#boton_formulario:hover:after {
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+  opacity: 1;
+  transition: .7s;
+}
+.boton_sublote{
+  height: 103%;
+  font-size: 125%;
+  color: white !important;
+  padding: 3%;
+}
+.inputs_sublotes
+{
+    height: 34px;
+    color: black !important;
+}
+
+.boton_municipio{
+    height: 62px;
+}
+.boton_municipio_update{
+    height: 39px;
+}
+/*
+|--------------------------------------------------------------------------
+| ESTILO TABLA
+|--------------------------------------------------------------------------
+*/
+
+#page-wrap {
+  margin: 50px;
+}
+p {
+  margin: 20px 0;
+}
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  tr:nth-of-type(odd) {
+    background: #eee;
+  }
+  th {
+    background: #ffffff;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+  }
+  td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+  }
+
+  @media
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body {
+      padding: 0;
+      margin: 0;
+      width: 320px; }
+    }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body {
+      width: 495px;
+    }
+  }
+  #tabla{
+    text-align: center;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      body {
+        width: 495px;
+      }
+    }
+
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+      body {
+        padding: 0;
+        margin: 0;
+        width: 320px; }
+      }
