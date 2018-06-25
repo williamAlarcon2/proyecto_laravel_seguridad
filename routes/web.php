@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('password/reset','Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
@@ -429,8 +432,12 @@ Route::get('ponedorasproduccions/create', 'PonedorasproduccionController@create'
   Route::get('excelcrearlevante' , ['as' => 'excelcrearlevante' , 'uses' => 'ReporteLevanteController@DescargarExcelLevante']);
   Route::post('levanteExport' , ['as' => 'levanteExport' , 'uses' => 'ReporteLevanteController@excelcrearlevante']);
 
+
+
+
   /***********Modificado por William********/
   Route::get('web-register', 'Auth\AuthController@webRegister');
   Route::post('web-register', 'Auth\AuthController@webRegisterPost');
+
 
 });

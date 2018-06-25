@@ -18,9 +18,9 @@
             <div class="sign-avatar">
               <img src="img/usuario.svg" alt="">
             </div>
-            <header class="sign-title">Login</header>
+            <header class="sign-title">Inicio de Sesión</header>
             <div class="form-group{{ $errors->has('corUsuario') ? ' has-error' : '' }}">
-              <input id="email" type="email" class="form-control" name="corUsuario" value="{{ old('corUsuario') }}" required autofocus placeholder="Nombre Usuario">
+              <input id="email" type="email" autocomplete="off" class="form-control" name="corUsuario" value="{{ old('corUsuario') }}" required autofocus placeholder="Nombre Usuario">
             </div>
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
             	<input id="password" type="password" class="form-control" name="password" required placeholder="Contraseña">
@@ -50,7 +50,9 @@
                 @endif
               </div>
             </div>
-
+            <div class="col-md-12">
+              {{link_to_route('password.request', '¿Olvidó su contraseña?')}}
+            </div>
             <button type="submit" class="btn btn-rounded btn-success sign-up">Iniciar Sesión</button>
           </form>
         </div>
